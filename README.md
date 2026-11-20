@@ -2,7 +2,7 @@
 
 An end-to-end data analytics project using **Python, PostgreSQL and Power BI** to find where customers drop off between viewing a product and buying it.
 
-![Funnel dashboard](powerbi/Funnel Analysis.png).
+![Funnel dashboard](powerbi/Funnel.png)
 
 ## Problem Statement
 
@@ -11,8 +11,6 @@ A business wants to know which marketing channels attract customers, which custo
 ## Dataset
 
 Source: [Marketing & E-Commerce Analytics Dataset (Kaggle)](https://www.kaggle.com/datasets/geethasagarbonthu/marketing-and-e-commerce-analytics-dataset)
-
-The dataset is tagged as synthetic on Kaggle, so the findings describe patterns in this data and not a real company.
 
 | File | Rows | Description |
 |---|---|---|
@@ -71,7 +69,8 @@ Session-level funnel (distinct sessions): 526,902 views, 231,525 carts, 95,539 p
 - **Traffic source matters:** Email (17.73%) and Paid Search (16.71%) lead, while Direct (3.90%) and Organic (3.89%) are lowest.
 - **Experiment:** Variant_B converted best (12.23%), then Variant_A (10.09%) and Control (9.04%).
 - **Loyalty tier:** Gold (13.17%) and Platinum (12.81%) convert better than Bronze (8.73%). Bronze is about 60% of customers.
-- **Device, country and product category** showed very little difference (about 9-10%).
+- **Device, country and product category** showed very little difference (about 9%).
+- **The category conversion rates** are 8.8-8.9%.
 
 ## Dashboards
 
@@ -88,13 +87,27 @@ Session-level funnel (distinct sessions): 526,902 views, 231,525 carts, 95,539 p
 
 ## Repository Structure
 
-Adjust the names below to match your folders.
-
 ```
-.
-├── data/                 # source CSV files
-├── notebooks/
+
+├── data/
+│   ├── campaigns.csv  # source CSV files
+│   ├── customers.csv
+│   ├── events.csv
+│   ├── products.csv
+│   └── transactions.csv
+├── powerbi/
+│   ├── dashboards.pbix
+│   ├── Campaigns.png   # dashboard screenshots
+│   ├── Customers.png
+│   ├── Events.png
+│   ├── Products.png
+│   ├── Transactions.png
+│   └── Funnel.png                
+├── python/
 │   └── EDA.ipynb
+├── reports/
+│   ├── Marketing_Funnel_Project_Report.pdf
+│   └── Business questions SQL Outputs.pdf
 ├── sql/
 │   ├── campaigns.sql
 │   ├── customers.sql
@@ -103,30 +116,19 @@ Adjust the names below to match your folders.
 │   ├── transactions.sql
 │   ├── joins.sql
 │   └── funnel.sql
-├── dashboard/            # Power BI file (.pbix)
-├── images/               # dashboard screenshots
-├── report/
-│   └── Marketing_Funnel_Project_Report.docx
 └── README.md
 ```
 
 ## How to Reproduce
 
 1. Download the dataset from Kaggle and place the CSVs in `data/`.
-2. Run `notebooks/EDA.ipynb` and save the cleaned CSVs.
+2. Run `python/EDA.ipynb` and save the cleaned CSVs.
 3. In PostgreSQL, create a database, create the five tables and load the CSVs with `\copy`.
 4. Run the queries in `sql/`.
 5. Open the `.pbix` file in Power BI and point it to your PostgreSQL database.
 
-## Limitations
-
-- Historical, synthetic Kaggle data, so recommendations are analytical suggestions and not verified business outcomes.
-- There is no cost data, so profit cannot be calculated.
-- Expected campaign uplift is a forecast and not realised uplift.
-- Event-level rates divide event counts, not distinct customers.
-- The results show associations, not causation.
-
 ## Author
 
 **Pravalika Ravalkol**
-LinkedIn: [(https://www.linkedin.com/in/pravalika-ravalkol/)]
+
+LinkedIn: https://www.linkedin.com/in/pravalika-ravalkol/
