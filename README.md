@@ -129,4 +129,4 @@ Adjust the names below to match your folders.
 ## Author
 
 **Pravalika Ravalkol**
-LinkedIn: [[your profile link](https://www.linkedin.com/in/pravalika-ravalkol/)]
+LinkedIn: [(https://www.linkedin.com/in/pravalika-ravalkol/)]
