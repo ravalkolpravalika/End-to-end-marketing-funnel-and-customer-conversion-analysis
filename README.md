@@ -2,7 +2,7 @@
 
 An end-to-end data analytics project using **Python, PostgreSQL and Power BI** to find where customers drop off between viewing a product and buying it.
 
-![Funnel dashboard](images/funnel_dashboard.png)
+![Funnel dashboard](powerbi/Funnel Analysis.png).
 
 ## Problem Statement
 
@@ -84,7 +84,7 @@ Session-level funnel (distinct sessions): 526,902 views, 231,525 carts, 95,539 p
 | Transactions | Revenue, discounts, refunds, top products |
 | Funnel | Funnel stages, drop-off, conversion by segment |
 
-![Transactions dashboard](images/transactions_dashboard.png)
+![Transactions dashboard](powerbi/Transactions.png)
 
 ## Repository Structure
 
@@ -128,5 +128,5 @@ Adjust the names below to match your folders.
 
 ## Author
 
-**[Your name]**
-LinkedIn: [your profile link]
+**Pravalika Ravalkol**
+LinkedIn: [[your profile link](https://www.linkedin.com/in/pravalika-ravalkol/)]
